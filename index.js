@@ -17,7 +17,7 @@ server.use(express.json());
 server.post('api/users', (req, res) => {
     const userInfo = req.body
     userInfo.id = shortid.generate();
-    const pushOut = () => userInfo.push(userInfo.id, userINfo.name);
+    const pushOut = () => userInfo.push(userInfo.id, userInfo.name);
     if (!userInfo.name == res.name || !userInfo.bio == res.bio){
         res.status(500).json({ errorMessage: ' The users information could not be retrieved '})
     } else {
